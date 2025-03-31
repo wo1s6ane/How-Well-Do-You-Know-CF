@@ -9,6 +9,7 @@ body {
     margin: 0;
     flex-direction: column;
     overflow: hidden; /* Prevents scrolling outside the main content */
+    text-align: center;
 }
 
 .quiz-container {
@@ -29,6 +30,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -51,10 +53,12 @@ button:hover {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    padding: 20px; /* Prevents text from touching screen edges */
 }
 
 #question-container {
     margin-top: 20px;
+    padding: 0 10px; /* Adds padding for mobile so text doesn't touch edges */
 }
 
 button {
@@ -68,4 +72,23 @@ button {
     max-width: 250px;
 }
 
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Prevents content from touching screen edges */
+    }
 
+    .quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .result-text {
+        font-size: 20px;
+    }
+}
