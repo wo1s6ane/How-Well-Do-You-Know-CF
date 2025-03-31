@@ -99,17 +99,18 @@ function showBufferTime() {
 
 function startCountdown() {
     const resultText = document.querySelector('.result-text');
-    resultText.textContent = "3...";
+    resultText.innerHTML = "3...";
 
     setTimeout(() => {
-        resultText.textContent = "2...";
+        resultText.innerHTML = "2...";
     }, 1000);
 
     setTimeout(() => {
-        resultText.textContent = "1...";
+        resultText.innerHTML = "1...";
     }, 2000);
 
     setTimeout(() => {
-        resultText.innerHTML = "🎉 Congratulations! You're gay 🎉<br><br>Not surprising honestly.<br>We all knew.";
+        resultText.innerHTML = `🎉 Congratulations! You're gay 🎉<br>
+            <span class="small-white-text">Not surprising honestly. We all knew.</span>`;
     }, 3000);
 }
