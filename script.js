@@ -110,6 +110,6 @@ function startCountdown() {
     }, 2000);
 
     setTimeout(() => {
-        resultText.textContent = "🎉 Congratulations! You're gay 🎉";
+        resultText.innerHTML = "🎉 Congratulations! You're gay 🎉<br><br>Not surprising honestly.<br>We all knew.";
     }, 3000);
 }
